@@ -1,6 +1,7 @@
 package dev.alexcoss.sorting;
 
 import dev.alexcoss.sorting.algorithms.BubbleSort;
+import dev.alexcoss.sorting.algorithms.SelectionSort;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -13,7 +14,7 @@ import java.util.Random;
 public class Launcher {
     public static void main(String[] args) {
         int[] arr = new int[20];
-        int min = -10;
+        int min = 0;
         int max = 100;
 
         //Unsorted array
@@ -22,7 +23,10 @@ public class Launcher {
 
         //Sorted array
         BubbleSort bubbleSort = new BubbleSort(arr);
-        bubbleSort.sort();
+        //bubbleSort.sort();
+
+        SelectionSort selectionSort = new SelectionSort(arr);
+        selectionSort.sort();
         System.out.println("Sorted array: " + Arrays.toString(arr));
     }
 
