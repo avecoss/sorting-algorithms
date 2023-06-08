@@ -1,13 +1,7 @@
-package dev.alexcoss.sorting.algorithms;
+package dev.alexcoss.algorithms.sorting;
 
 public class SelectionSort {
-    int[] array;
-
-    public SelectionSort(int[] array) {
-        this.array = array;
-    }
-
-    public void sort() {
+    public static void sort(int[] array) {
         int position, temp;
         for (int i = 0; i < array.length; i++) {
             position = i;

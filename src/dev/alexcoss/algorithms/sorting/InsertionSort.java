@@ -1,13 +1,7 @@
-package dev.alexcoss.sorting.algorithms;
+package dev.alexcoss.algorithms.sorting;
 
 public class InsertionSort {
-    int[] array;
-
-    public InsertionSort(int[] array) {
-        this.array = array;
-    }
-
-    public void sort() {
+    public static void sort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int temp = array[i];
             int j = i - 1;

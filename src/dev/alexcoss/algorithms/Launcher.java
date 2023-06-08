@@ -1,14 +1,16 @@
-package dev.alexcoss.sorting;
+package dev.alexcoss.algorithms;
 
-import dev.alexcoss.sorting.algorithms.BubbleSort;
-import dev.alexcoss.sorting.algorithms.InsertionSort;
-import dev.alexcoss.sorting.algorithms.SelectionSort;
+import dev.alexcoss.algorithms.search.BinarySearch;
+import dev.alexcoss.algorithms.sorting.BubbleSort;
+import dev.alexcoss.algorithms.sorting.InsertionSort;
+import dev.alexcoss.algorithms.sorting.SelectionSort;
 
 import java.util.Arrays;
 import java.util.Random;
 
 /**
  * This is a small project with various sorting algorithms such as: Bubble Sort, Selection Sort, Insertion Sort, Quick Sort, Merge Sort.
+ * And Binary search algorithm
  *
  * @author alexcoss
  */
@@ -16,22 +18,21 @@ public class Launcher {
     public static void main(String[] args) {
         int[] arr = new int[20];
         int min = -10;
-        int max = 100;
+        int max = 30;
 
-        //Unsorted array
+        // Fill array
         fillArrayWithRandomNumbers(arr, min, max);
         System.out.println("Unsorted array: " + Arrays.toString(arr));
 
-        //Sorted array
-        BubbleSort bubbleSort = new BubbleSort(arr);
-        //bubbleSort.sort();
+        // Sorting
+        BubbleSort.sort(arr);
+        SelectionSort.sort(arr);
+        InsertionSort.sort(arr);
 
-        SelectionSort selectionSort = new SelectionSort(arr);
-        //selectionSort.sort();
-
-        InsertionSort insertionSort = new InsertionSort(arr);
-        insertionSort.sort();
         System.out.println("Sorted array: " + Arrays.toString(arr));
+
+        // Binary search (must be sorted)
+        System.out.println("id: " + BinarySearch.search(arr, 20));
     }
 
     private static void fillArrayWithRandomNumbers(int[] array, int min, int max) {
