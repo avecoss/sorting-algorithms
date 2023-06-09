@@ -1,9 +1,7 @@
 package dev.alexcoss.algorithms;
 
 import dev.alexcoss.algorithms.search.BinarySearch;
-import dev.alexcoss.algorithms.sorting.BubbleSort;
-import dev.alexcoss.algorithms.sorting.InsertionSort;
-import dev.alexcoss.algorithms.sorting.SelectionSort;
+import dev.alexcoss.algorithms.sorting.*;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -28,6 +26,8 @@ public class Launcher {
         BubbleSort.sort(arr);
         SelectionSort.sort(arr);
         InsertionSort.sort(arr);
+        MergeSort.sort(arr);
+        QuickSort.sort(arr);
 
         System.out.println("Sorted array: " + Arrays.toString(arr));
 
